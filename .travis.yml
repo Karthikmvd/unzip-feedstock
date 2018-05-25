@@ -58,5 +58,5 @@ install:
       anaconda -v login --username $USER --password $PASSWORD
 
 script:
-  - conda build ./recipe -m ./.ci_support/${CONFIG}.yaml
+  - conda build ./recipe -m ./${CONFIG}.yaml
   #- upload_or_check_non_existence ./recipe conda-forge --channel=main -m ./${CONFIG}.yaml
