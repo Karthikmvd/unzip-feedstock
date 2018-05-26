@@ -44,6 +44,7 @@ install:
     # Configure conda.
     - |
       echo ""
+      sudo apt insatall -y lftp
       echo "Configuring conda."
       source /opt/conda/bin/activate root
       conda install -y conda-build
