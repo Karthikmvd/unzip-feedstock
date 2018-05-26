@@ -44,7 +44,7 @@ install:
     # Configure conda.
     - |
       echo ""
-      sudo apt insatall -y lftp
+      sudo apt insatall  lftp
       echo "Configuring conda."
       source /opt/conda/bin/activate root
       conda install -y conda-build
@@ -54,10 +54,10 @@ install:
       conda config --add channels karthikm 
       conda config --add channels conda-forge
       conda config --set show_channel_urls true
-      conda config --set anaconda_upload yes
+      conda config --set anaconda_upload no
       #conda install --yes --quiet conda-forge-ci-setup=1
       #source run_conda_forge_build_setup
-      anaconda -v login --username $USER --password $PASSWORD
+      #anaconda -v login --username $USER --password $PASSWORD
 
 script:
   - conda build ./recipe -m ./${CONFIG}.yaml
